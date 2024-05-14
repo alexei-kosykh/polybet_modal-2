@@ -1,0 +1,142 @@
+.input {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: -o-linear-gradient(
+    315deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+
+  &:focus-within {
+    background: -o-linear-gradient(
+      315deg,
+      rgba(255, 255, 255, 0.29) 0%,
+      rgba(255, 255, 255, 0.163) 100%
+    );
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.29) 0%,
+      rgba(255, 255, 255, 0.163) 100%
+    );
+  }
+
+  input {
+    &:placeholder-shown ~ span {
+      display: block;
+      position: absolute;
+      font-size: 14px;
+      color: rgba(255, 115, 123, 1);
+    }
+  }
+
+  input, input:valid {
+    // border: 1px solid rgba(255, 115, 123, 1);
+    & ~ span {
+      display: none;
+    }
+
+    & ~ label {
+      position: absolute;
+      top: 73px;
+      left: 0;
+      display: none;
+      color: rgba(255, 115, 123, 1);
+      // font-size: 12px;
+    }
+
+
+  }
+
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+    font-size: 14px;
+    font-family: 'InterB', sans-serif;
+    color: #fff;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+  }
+
+  input::-moz-placeholder,
+  textarea::-moz-placeholder {
+    font-size: 14px;
+    font-family: 'InterB', sans-serif;
+    color: #fff;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+  }
+
+  input:-ms-input-placeholder,
+  textarea:-ms-input-placeholder {
+    font-size: 14px;
+    font-family: 'InterB', sans-serif;
+    color: #fff;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+  }
+
+  input::-ms-input-placeholder,
+  textarea::-ms-input-placeholder {
+    font-size: 14px;
+    font-family: 'InterB', sans-serif;
+    color: #fff;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    font-size: 14px;
+    font-family: 'InterB', sans-serif;
+    color: #fff;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+@include mobile() {
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+    font-family: 'InterS', sans-serif;
+  }
+
+  input::-moz-placeholder,
+  textarea::-moz-placeholder {
+    font-family: 'InterS', sans-serif;
+  }
+
+  input:-ms-input-placeholder,
+  textarea:-ms-input-placeholder {
+    font-family: 'InterS', sans-serif;
+  }
+
+  input::-ms-input-placeholder,
+  textarea::-ms-input-placeholder {
+    font-family: 'InterS', sans-serif;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    font-family: 'InterS', sans-serif;
+  }
+}

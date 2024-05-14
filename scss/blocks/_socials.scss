@@ -1,0 +1,72 @@
+.socials {
+  max-width: 1490px;
+  width: 100%;
+  margin: 0 auto;
+
+  position: fixed;
+  top: 96px;
+  right: 0;
+  left: 0;
+  z-index: 200;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+
+  a:hover {
+    &[title='Soon'] > span {
+      display: block;
+      animation-name: slide;
+      animation-duration: 0.5s;
+      animation-iteration-count: 1;
+    }
+  }
+
+  a[title='Soon'] > span {
+    font-family: 'PoppinsR', sans-serif;
+    position: absolute;
+    font-size: 8px;
+    color: white;
+    top: 85px;
+    left: 6px;
+    display: none;
+  }
+
+  div:not(:empty) {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 16px;
+    top: 0;
+    right: 0;
+    padding-right: 30px;
+  }
+
+  svg {
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: default;
+
+    &:hover {
+      path {
+        fill: #9e9dfe;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+}
+
+@include tablet() {
+  .socials {
+    display: none;
+  }
+}

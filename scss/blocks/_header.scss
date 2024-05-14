@@ -1,0 +1,17 @@
+header {
+  display: flex;
+  justify-content:center;
+
+}
+
+@include laptop() {
+  header {
+    width: 100%;
+    height: auto;
+
+    img {
+      width: 180%;
+      height: auto;
+    }
+  }
+}
