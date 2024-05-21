@@ -1,6 +1,6 @@
 .modal__join {
   width: 437px;
-  height: 552px;
+  // height: 552px;
   padding: 18px;
   border-radius: 20px;
   position: relative;
@@ -8,16 +8,48 @@
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #FFFFFF1A;
+  background-color: #ffffff1a;
 
   & .button {
-    transition: border 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    transition: border 0.2s ease-in-out, background-image 0.2s ease-in-out;
+
+    &:hover {
+      background-image: url('../../../img/button-hover.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      cursor: url('../../../img/cursor.png'), pointer;
+      color: #fff;
+    }
   }
 
   & > div {
     & > img {
       margin-bottom: 20px;
     }
+  }
+
+  .form_ok {
+    display: none;
+    text-align: center;
+    padding-top: 30px;
+
+    p {
+      margin-bottom: 40px;
+    }
+
+    button {
+      max-width: 150px;
+      margin-bottom: 50px;
+    }
+
+    // &+.modal__join_motivation {
+    //   padding-bottom: 20px;
+    // }
+  }
+
+  .modal__two {
+    display: none;
   }
 
   .bgWrapper {
@@ -38,6 +70,43 @@
     position: relative;
   }
 
+  form {
+    text-align: center;
+
+    input ~ label {
+      font-size: 12px;
+    }
+
+    .modal_name {
+      gap: 13px;
+
+      input:placeholder-shown {
+        & ~ span {
+          left: 114px;
+          top: 25px;
+        }
+      }
+    }
+
+    .modal_email,
+    .modal_name {
+      input {
+        &::placeholder {
+          opacity: 0.6;
+        }
+      }
+    }
+
+    .modal_email {
+      input {
+        &:placeholder-shown ~ span {
+          right: 100px;
+          top: 25px;
+        }
+      }
+    }
+  }
+
   h5 {
     margin-bottom: 8px;
   }
@@ -47,6 +116,36 @@
     font-size: 14px;
     line-height: 23px;
     margin-bottom: 30px;
+  }
+
+  .modalVideo {
+    width: 401px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    img,
+    video {
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    p {
+      text-align: center;
+      text-transform: uppercase;
+      font-family: 'InterE', sans-serif;
+      font-size: 50px;
+      line-height: 60px;
+      letter-spacing: -2px;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
   }
 
   .input {
@@ -87,20 +186,55 @@
     &:hover {
       color: #212121;
       background-color: rgb(234, 234, 234);
+      cursor: url('../../../img/cursor.png'), pointer;
     }
   }
 
-  &_motivation {
-    max-width: 301px;
-    text-align: center;
-    margin: 0 auto 20px;
-
-    span {
-      font-family: 'InterM', sans-serif;
-      line-height: 28px;
-      font-size: 20px;
+  .modal__one {
+    &_motivation {
+      max-width: 301px;
       text-align: center;
-      margin-bottom: 15px;
+      margin: 0 auto 20px;
+
+      span {
+        font-family: 'InterM', sans-serif;
+        line-height: 28px;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .modal__two {
+    padding: 15px;
+  }
+
+  &_motivation {
+    font-family: 'PoppinsB', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+    margin-bottom: 15px;
+
+    &:after,
+    &:before {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 16px;
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+    &:before {
+      top: 50%;
+      left: 0;
+    }
+
+    &:after {
+      top: 50%;
+      right: 0;
     }
   }
 
@@ -139,6 +273,11 @@
       cursor: default;
       fill: #7170e3;
 
+      &:hover {
+        cursor: url('../../../img/cursor.png'), pointer;
+        fill: #242424;
+      }
+
       // &:hover {
       //   path {
       //     fill: #9e9dfe;
@@ -151,8 +290,16 @@
 
 @include mobile() {
   .modal__join {
-    width: 92%;
+    width: 85%;
     height: auto;
+
+    .modalVideo {
+      width: 100%;
+    }
+
+    .input {
+      gap: 10px;
+    }
 
     & > div {
       & > img {
@@ -182,7 +329,7 @@
       .modal_email {
         input {
           &:placeholder-shown ~ span {
-            right: 7px;
+            left: -7px;
             top: 0;
             position: relative;
           }
@@ -195,5 +342,12 @@
 @include mobile-only() {
   .modal__join {
     width: 100%;
+
+    .modalVideo {
+      p {
+        font-size: 40px;
+        line-height: 40px;
+      }
+    }
   }
 }

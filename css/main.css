@@ -512,7 +512,6 @@ textarea {
 }
 .modal__join {
   width: 437px;
-  height: 552px;
   padding: 18px;
   border-radius: 20px;
   position: relative;
@@ -522,10 +521,33 @@ textarea {
   background-color: rgba(255, 255, 255, 0.1019607843);
 }
 .modal__join .button {
-  transition: border 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out, background-image 0.2s ease-in-out;
+}
+.modal__join .button:hover {
+  background-image: url("../../../img/button-hover.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: url("../../../img/cursor.png"), pointer;
+  color: #fff;
 }
 .modal__join > div > img {
   margin-bottom: 20px;
+}
+.modal__join .form_ok {
+  display: none;
+  text-align: center;
+  padding-top: 30px;
+}
+.modal__join .form_ok p {
+  margin-bottom: 40px;
+}
+.modal__join .form_ok button {
+  max-width: 150px;
+  margin-bottom: 50px;
+}
+.modal__join .modal__two {
+  display: none;
 }
 .modal__join .bgWrapper {
   z-index: 0;
@@ -543,6 +565,38 @@ textarea {
 .modal__join > div:last-child {
   position: relative;
 }
+.modal__join form {
+  text-align: center;
+}
+.modal__join form input ~ label {
+  font-size: 12px;
+}
+.modal__join form .modal_name {
+  gap: 13px;
+}
+.modal__join form .modal_name input:-moz-placeholder-shown ~ span {
+  left: 114px;
+  top: 25px;
+}
+.modal__join form .modal_name input:placeholder-shown ~ span {
+  left: 114px;
+  top: 25px;
+}
+.modal__join form .modal_email input::-moz-placeholder, .modal__join form .modal_name input::-moz-placeholder {
+  opacity: 0.6;
+}
+.modal__join form .modal_email input::placeholder,
+.modal__join form .modal_name input::placeholder {
+  opacity: 0.6;
+}
+.modal__join form .modal_email input:-moz-placeholder-shown ~ span {
+  right: 100px;
+  top: 25px;
+}
+.modal__join form .modal_email input:placeholder-shown ~ span {
+  right: 100px;
+  top: 25px;
+}
 .modal__join h5 {
   margin-bottom: 8px;
 }
@@ -551,6 +605,35 @@ textarea {
   font-size: 14px;
   line-height: 23px;
   margin-bottom: 30px;
+}
+.modal__join .modalVideo {
+  width: 401px;
+  height: 300px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.modal__join .modalVideo img,
+.modal__join .modalVideo video {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.modal__join .modalVideo p {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "InterE", sans-serif;
+  font-size: 50px;
+  line-height: 60px;
+  letter-spacing: -2px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 .modal__join .input {
   width: 100%;
@@ -584,18 +667,45 @@ textarea {
 .modal__join button:hover {
   color: #212121;
   background-color: rgb(234, 234, 234);
+  cursor: url("../../../img/cursor.png"), pointer;
 }
-.modal__join_motivation {
+.modal__join .modal__one_motivation {
   max-width: 301px;
   text-align: center;
   margin: 0 auto 20px;
 }
-.modal__join_motivation span {
+.modal__join .modal__one_motivation span {
   font-family: "InterM", sans-serif;
   line-height: 28px;
   font-size: 20px;
   text-align: center;
   margin-bottom: 15px;
+}
+.modal__join .modal__two {
+  padding: 15px;
+}
+.modal__join_motivation {
+  font-family: "PoppinsB", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.modal__join_motivation:after, .modal__join_motivation:before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 16px;
+  background-color: rgb(255, 255, 255);
+}
+.modal__join_motivation:before {
+  top: 50%;
+  left: 0;
+}
+.modal__join_motivation:after {
+  top: 50%;
+  right: 0;
 }
 .modal__join .modal__socials {
   display: flex;
@@ -624,11 +734,21 @@ textarea {
   cursor: default;
   fill: #7170e3;
 }
+.modal__join .modal__socials svg:hover {
+  cursor: url("../../../img/cursor.png"), pointer;
+  fill: #242424;
+}
 
 @media (max-width: 576px) {
   .modal__join {
-    width: 92%;
+    width: 85%;
     height: auto;
+  }
+  .modal__join .modalVideo {
+    width: 100%;
+  }
+  .modal__join .input {
+    gap: 10px;
   }
   .modal__join > div > img {
     width: 100%;
@@ -647,12 +767,12 @@ textarea {
     padding: 0 20px;
   }
   .modal__join form .modal_email input:-moz-placeholder-shown ~ span {
-    right: 7px;
+    left: -7px;
     top: 0;
     position: relative;
   }
   .modal__join form .modal_email input:placeholder-shown ~ span {
-    right: 7px;
+    left: -7px;
     top: 0;
     position: relative;
   }
@@ -660,6 +780,10 @@ textarea {
 @media (max-width: 393px) {
   .modal__join {
     width: 100%;
+  }
+  .modal__join .modalVideo p {
+    font-size: 40px;
+    line-height: 40px;
   }
 }
 .modal {
