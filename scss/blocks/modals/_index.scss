@@ -98,3 +98,17 @@
     }
   }
 }
+
+@include mobile() {
+  .modal {
+    &__wrap {
+      justify-content: flex-end;
+      margin-bottom: 50px;
+    }
+
+    iframe {
+      width: 90%;
+      height: 60vh;
+    }
+  }
+}

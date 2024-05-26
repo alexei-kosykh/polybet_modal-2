@@ -517,6 +517,7 @@ textarea {
   position: relative;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  background-image: "none";
   background-size: cover;
   background-color: rgba(255, 255, 255, 0.1019607843);
 }
@@ -736,16 +737,42 @@ textarea {
 }
 .modal__join .modal__socials svg:hover {
   cursor: url("../../../img/cursor.png"), pointer;
-  fill: #242424;
 }
 
 @media (max-width: 576px) {
   .modal__join {
     width: 85%;
-    height: auto;
+    background-image: linear-gradient(132deg, rgba(44, 44, 44, 0.593) 0%, rgba(0, 0, 0, 0.188) 100%), url("../../../img/button-hover.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .modal__join .button {
+    background-image: url("../../../img/button-hover.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-transform: none;
+  }
+  .modal__join .button:hover {
+    cursor: url("../../../img/cursor.png"), pointer;
+  }
+  .modal__join .modal__socials {
+    display: none;
   }
   .modal__join .modalVideo {
     width: 100%;
+    height: 50vh;
+  }
+  .modal__join .modalVideo p {
+    text-transform: none;
+    font-family: "InterB", sans-serif;
+    font-size: 60px;
+    line-height: 70px;
+  }
+  .modal__join button {
+    margin-bottom: 0;
   }
   .modal__join .input {
     gap: 10px;
@@ -753,7 +780,10 @@ textarea {
   .modal__join > div > img {
     width: 100%;
   }
-  .modal__join_motivation span {
+  .modal__join .modal__one_motivation {
+    display: none;
+  }
+  .modal__join .modal__one_motivation span {
     font-family: "InterM", sans-serif;
     line-height: 28px;
     font-size: 18px;
@@ -779,11 +809,7 @@ textarea {
 }
 @media (max-width: 393px) {
   .modal__join {
-    width: 100%;
-  }
-  .modal__join .modalVideo p {
-    font-size: 40px;
-    line-height: 40px;
+    width: 90%;
   }
 }
 .modal {
@@ -871,6 +897,16 @@ textarea {
   .modal iframe {
     width: 95vw;
     height: 73.0769230769vw;
+  }
+}
+@media (max-width: 576px) {
+  .modal__wrap {
+    justify-content: flex-end;
+    margin-bottom: 50px;
+  }
+  .modal iframe {
+    width: 90%;
+    height: 60vh;
   }
 }
 body {
