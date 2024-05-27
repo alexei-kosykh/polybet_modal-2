@@ -524,13 +524,12 @@ textarea {
 .modal__join .button {
   transition: border 0.2s ease-in-out, background-image 0.2s ease-in-out;
 }
-.modal__join .button:hover {
+.modal__join .violet:hover {
   background-image: url("../../../img/button-hover.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   cursor: url("../../../img/cursor.png"), pointer;
-  color: #fff;
 }
 .modal__join > div > img {
   margin-bottom: 20px;
