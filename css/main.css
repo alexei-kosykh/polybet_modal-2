@@ -525,11 +525,11 @@ textarea {
   transition: border 0.2s ease-in-out, background-image 0.2s ease-in-out;
 }
 .modal__join .violet:hover {
-  background-image: url("../../../img/button-hover.png");
+  background-image: url("./img/button-hover.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  cursor: url("../../../img/cursor.png"), pointer;
+  cursor: url("./img/cursor.png"), pointer;
 }
 .modal__join > div > img {
   margin-bottom: 20px;
@@ -667,7 +667,7 @@ textarea {
 .modal__join button:hover {
   color: #212121;
   background-color: rgb(234, 234, 234);
-  cursor: url("../../../img/cursor.png"), pointer;
+  cursor: url("./img/cursor.png"), pointer;
 }
 .modal__join .modal__one_motivation {
   max-width: 301px;
@@ -735,27 +735,26 @@ textarea {
   fill: #7170e3;
 }
 .modal__join .modal__socials svg:hover {
-  cursor: url("../../../img/cursor.png"), pointer;
+  cursor: url("./img/cursor.png"), pointer;
 }
 
 @media (max-width: 576px) {
   .modal__join {
     width: 85%;
-    background-image: linear-gradient(132deg, rgba(44, 44, 44, 0.593) 0%, rgba(0, 0, 0, 0.188) 100%), url("../../../img/button-hover.png");
+    background-image: linear-gradient(132deg, rgba(44, 44, 44, 0.593) 0%, rgba(0, 0, 0, 0.188) 100%), url("./img/button-hover.png");
     background-size: cover;
     background-position: center;
     position: relative;
   }
   .modal__join .button {
-    background-image: url("../../../img/button-hover.png");
+    background-image: url("./img/button-hover.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    color: #fff;
     text-transform: none;
   }
   .modal__join .button:hover {
-    cursor: url("../../../img/cursor.png"), pointer;
+    cursor: url("./img/cursor.png"), pointer;
   }
   .modal__join .modal__socials {
     display: none;
