@@ -24,10 +24,10 @@ const sendModalForm = () => {
       `;
 
   Email.send({
-    SecureToken: 'd00c5bdc-91ed-4f47-b9ba-adbb0cb2bfc8',
-    To: 'open@polibet.io',
-    From: 'open@polibet.io',
-    Subject: 'User data from modal',
+    SecureToken: '63793c49-17f8-46a1-8401-ce424743df94',
+    To: 'info@polyway.investments',
+    From: 'info@polyway.investments',
+    Subject: 'User data from modal yez casino',
     Body: ebody,
   }).then((message) => {
     console.log(message);
@@ -75,9 +75,12 @@ button_mod.addEventListener('click', function (event) {
   }
 });
 
+let backgroundImage = '';
+
 button_join.addEventListener('click', function (event) {
   modal_form.style.display = 'block';
   modal_join.style.display = 'none';
+  backgroundImage = modal_main.style.backgroundImage;
   modal_main.style.backgroundImage = 'none';
   modal_main.style.backgroundColor = '#242424';
 });
@@ -85,7 +88,7 @@ button_join.addEventListener('click', function (event) {
 button_ok.addEventListener('click', function (event) {
   modal_form.style.display = 'none';
   modal_join.style.display = 'block';
-  modal_main.style.backgroundImage = `linear-gradient(132deg, rgba(44, 44, 44, 0.593) 0%, rgba(0, 0, 0, 0.188) 100%),url('../../../img/button-hover.png')`;
+  modal_main.style.backgroundImage = `${backgroundImage}`;
   modal_main.style.backgroundColor = '#ffffff1a';
 });
 
