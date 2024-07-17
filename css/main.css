@@ -155,7 +155,7 @@ input::-ms-clear {
 }
 
 button {
-  cursor: default;
+  cursor: pointer;
 }
 
 button::-moz-focus-inner {
@@ -928,10 +928,6 @@ body {
 .page::-webkit-scrollbar {
   width: 0;
   height: 0;
-}
-
-a[target=_blank] {
-  cursor: default;
 }
 
 p {
