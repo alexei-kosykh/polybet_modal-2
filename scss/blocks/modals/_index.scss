@@ -28,7 +28,7 @@
       position: absolute;
       right: 0;
       top: -40px;
-      cursor: default;
+      cursor: pointer;
     }
 
     div[data-close]:has(+ .modal__stake_img) {

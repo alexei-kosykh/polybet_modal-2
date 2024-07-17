@@ -241,7 +241,7 @@ header {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  cursor: default;
+  cursor: pointer;
 }
 .socials svg:hover path {
   fill: #9e9dfe;
@@ -529,7 +529,7 @@ textarea {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  cursor: default;
+  cursor: pointer;
 }
 .modal__join > div > img {
   margin-bottom: 20px;
@@ -667,7 +667,7 @@ textarea {
 .modal__join button:hover {
   color: #212121;
   background-color: rgb(234, 234, 234);
-  cursor: default;
+  cursor: pointer;
 }
 .modal__join .modal__one_motivation {
   max-width: 301px;
@@ -731,11 +731,11 @@ textarea {
 .modal__join .modal__socials svg {
   width: 40px;
   height: 40px;
-  cursor: default;
+  cursor: pointer;
   fill: #7170e3;
 }
 .modal__join .modal__socials svg:hover {
-  cursor: default;
+  cursor: pointer;
 }
 
 @media (max-width: 576px) {
@@ -754,7 +754,7 @@ textarea {
     text-transform: none;
   }
   .modal__join .button:hover {
-    cursor: default;
+    cursor: pointer;
   }
   .modal__join .modal__socials {
     display: none;
@@ -837,7 +837,7 @@ textarea {
   position: absolute;
   right: 0;
   top: -40px;
-  cursor: default;
+  cursor: pointer;
 }
 .modal--active div[data-close]:has(+ .modal__stake_img) {
   top: -25px;
@@ -995,7 +995,7 @@ h6 {
   overflow: hidden;
   box-shadow: 15px 19px 20px 0px rgba(0, 0, 0, 0.3);
   font-family: "PoppinsM", sans-serif;
-  cursor: default;
+  cursor: pointer;
 }
 .card:hover {
   background: #1b1b1b;
@@ -1035,7 +1035,7 @@ h6 {
   height: 30px;
   background-color: rgba(28, 28, 28, 0.7803921569);
   border-radius: 10px;
-  cursor: default;
+  cursor: pointer;
 }
 .card__socials a svg {
   opacity: 1;

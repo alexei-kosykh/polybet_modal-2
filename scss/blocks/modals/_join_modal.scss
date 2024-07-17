@@ -20,7 +20,7 @@
     background-size: cover;
     background-position: center;
     // cursor: url('../img/cursor.png'), pointer;
-    cursor: default;
+    cursor: pointer;
     // color: #fff;
   }
 
@@ -188,7 +188,7 @@
       color: #212121;
       background-color: rgb(234, 234, 234);
       // cursor: url('../img/cursor.png'), pointer;
-      cursor: default;
+      cursor: pointer;
     }
   }
 
@@ -272,12 +272,12 @@
       // backdrop-filter: blur(4.1049365997px);
       width: 40px;
       height: 40px;
-      cursor: default;
+      cursor: pointer;
       fill: #7170e3;
 
       &:hover {
         // cursor: url('../img/cursor.png'), pointer;
-        cursor: default;
+        cursor: pointer;
         // fill: #242424;
       }
 
@@ -314,7 +314,7 @@
       text-transform: none;
       &:hover {
         // cursor: url('../img/cursor.png'), pointer;
-        cursor: default;
+        cursor: pointer;
       }
     }
 
